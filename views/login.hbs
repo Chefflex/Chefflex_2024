@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Signup Page</title>
+    <script src=" main.js" defer type="module"></script>
     <!-- Add your CSS stylesheets here -->
     <link rel="stylesheet" href="/public/stylesheets/style.css">
 </head>
@@ -15,18 +16,24 @@
         <form action="{{action}}" method="post">
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email"  >
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password"  >
             </div>
-            {{#if isSignup}}
+            <div class="input">
+                <button id="google-login-btn" class="google-button">
+                    <i class="fab fa-google"></i> Login with Google
+                </button>
+            </div>
+            {{!-- {{#if isSignup}}
                 <div class="form-group">
                     <label for="confirm-password">Confirm Password:</label>
                     <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
-            {{/if}}
+            {{/if}} --}}
+             
             <button type="submit">{{buttonText}}</button>
         </form>
         <p>{{switchText}}</p>
