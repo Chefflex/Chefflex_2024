@@ -21,6 +21,7 @@ var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var jobsRouter = require('./routes/api/jobs');
 var signUpRouter = require('./routes/signUp')
+var dashboardRouter = require('./routes/dashboard')
 
 
 
@@ -42,6 +43,7 @@ app.use('/', indexRouter);
 app.use('/jobs', jobsRouter);
 app.use('/login', loginRouter)
 app.use('/signUp', signUpRouter)
+app.use('/dashboard', dashboardRouter)
 
 // initialize passport and strategy
 app.use(passport.initialize());
